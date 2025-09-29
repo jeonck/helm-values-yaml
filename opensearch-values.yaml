@@ -1,3 +1,5 @@
+# Source: https://github.com/opensearch-project/helm-charts/blob/main/charts/opensearch/values.yaml
+
 ---
 clusterName: "opensearch-cluster"
 nodeGroup: "master"
@@ -357,12 +359,12 @@ securityConfig:
     securityConfigSecret: ""
     dataComplete: true
     data: {}
-      # config.yml: |-
-      # internal_users.yml: |-
-      # roles.yml: |-
-      # roles_mapping.yml: |-
-      # action_groups.yml: |-
-      # tenants.yml: |-
+      # config.yml: -|
+      # internal_users.yml: -|
+      # roles.yml: -|
+      # roles_mapping.yml: -|
+      # action_groups.yml: -|
+      # tenants.yml: -|
 
 # How long to wait for opensearch to stop gracefully
 terminationGracePeriod: 120
@@ -453,7 +455,7 @@ lifecycle: {}
   #         REPLICA_COUNT=1
   #         ES_URL=http://localhost:9200
   #         while [[ "$(curl -s -o /dev/null -w '%{http_code}\n' $ES_URL)" != "200" ]]; do sleep 1; done
-  #         curl -XPUT "$ES_URL/_template/$TEMPLATE_NAME" -H 'Content-Type: application/json' -d'{"index_patterns":["""$INDEX_PATTERN"""],"settings":{"number_of_shards":'$SHARD_COUNT',"number_of_replicas":'$REPLICA_COUNT'}}'
+  #         curl -XPUT "$ES_URL/_template/$TEMPLATE_NAME" -H 'Content-Type: application/json' -d'{"index_patterns":["\""$INDEX_PATTERN"\""],"settings":{"number_of_shards":'$SHARD_COUNT',"number_of_replicas":'$REPLICA_COUNT'}}"
 
 keystore: []
 # To add secrets to the keystore:

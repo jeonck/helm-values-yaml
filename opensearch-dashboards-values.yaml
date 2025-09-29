@@ -1,3 +1,5 @@
+# Source: https://github.com/opensearch-project/helm-charts/blob/main/charts/opensearch-dashboards/values.yaml
+
 # Copyright OpenSearch Contributors
 # SPDX-License-Identifier: Apache-2.0
 
